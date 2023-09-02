@@ -36,15 +36,6 @@ export class ChatGateway
     @MessageBody() username: string,
     @ConnectedSocket() client: Socket,
   ) {
-    console.log('메세지받나요?');
-    console.log(username);
-
-    console.log('--');
-    //console.log(client.);
-    //client.join('hihi2');
-    //socket io adpater를 달시 rooms 확인가능!! 근데 필요없음
-    //console.log(this.server.sockets.adapter.rooms.get('hihi'));
-    //console.log(this.server.sockets.adapter);
     var s = {
       안녕: 'ㅇㅇ',
       dd: '9000',

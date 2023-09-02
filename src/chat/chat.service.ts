@@ -22,13 +22,15 @@ export class ChatService {
 
       client.data.roomid = data['roomid'];
       client.join(data['roomid']);
+      data['message'] = `"${data['username']}"님이 방에 입장하셨습니다. `;
+      client.to(client.data.roomid).emit('enterRoom', data);
     } catch (error) {
       this.logger.debug(error);
     }
   }
   exitRoom(client: Socket, data: Object): void {
     try {
-      client.to(client.data.roomid).emit('msgToClient', {
+      client.to(client.data.roomid).emit('exitRoom', {
         username: data['username'],
         message: `"${data['username']}"님이 방에 나가셨습니다. `,
       });

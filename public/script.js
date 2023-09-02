@@ -6,61 +6,49 @@ const submit = getid('submit');
 const exit = getid('exitRoom');
 const text = getid('text');
 const enter = getid('enterRoom');
+const textbox = getid('textbox');
 let name;
 
-function hello() {
-  const username = prompt('hi');
-  name = username;
-  console.log(username);
-  let data = {
-    hjhi: 'Ss',
-    dd: username,
-  };
-  socket.emit('new_user', data);
-  console.log('메세지보냄?');
-  socket.on('hello_user', (data) => {
-    console.log(data.dd + ' 하위영');
-    console.log('---');
-    console.log('메세지받음');
-  });
-
+function init() {
   socket.on('msgToClient', (data) => {
     console.log(data.username + '메세지 내용 : ' + data.message);
+
     console.log('메세지받음');
+    textbox.innerHTML +=
+      '<p> Port:' + data.username + ' : ' + data.message + '</p>';
   });
   socket.on('enterRoom', (data) => {
     console.log('방입장');
+    textbox.innerHTML +=
+      '<p>' + data.username + '님이 방에 입장하셨습니다' + '</p>';
   });
-  socket.on('exitRoome', (data) => {
+  socket.on('exitRoom', (data) => {
     console.log('방입장');
+    textbox.innerHTML += '<p>' + data.username + '님이 퇴장하셨습니다' + '</p>';
   });
 }
 
 submit.addEventListener('click', function () {
   console.log(text.value);
   let data = {
-    username: '8000',
+    username: '3001',
     message: text.value,
   };
   socket.emit('msgToServer', data);
 });
 enter.addEventListener('click', function () {
   let data = {
-    username: '9000',
-    text: text.value,
+    username: '3001',
     roomid: 'hihi',
   };
   socket.emit('enterRoom', data);
 });
 exit.addEventListener('click', function () {
   let data = {
-    username: '9000',
+    username: '3001',
     text: text.value,
   };
   socket.emit('exitRoom', data);
 });
-function init() {
-  hello();
-}
 
 init();
