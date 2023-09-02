@@ -2,7 +2,8 @@
 
 ## 📒**소개 **
 
-Scale out한 Socket server를 사용하기 위해 Redis Pub/Sub기능을 활용하여 구현하였습니다.
+Scale out한 Socket server를 사용하기 위해 Redis Pub/Sub기능을 활용하여 구현해보았습니다.
+
 
 
 
