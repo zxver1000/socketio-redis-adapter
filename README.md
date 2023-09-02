@@ -24,4 +24,5 @@
 
 #Reference
 ---
-[https://socket.io/docs/v4/redis-adapter/](https://socket.io/docs/v4/redis-adapter/)
+- [https://socket.io/docs/v4/redis-adapter/](https://socket.io/docs/v4/redis-adapter/)
+- [https://docs.nestjs.com/websockets/adapter](https://docs.nestjs.com/websockets/adapter)
