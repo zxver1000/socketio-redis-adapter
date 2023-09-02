@@ -1,5 +1,8 @@
 
 
+## 📒**소개 **
+
+Scale out한 Socket server를 사용하기 위해 Redis Pub/Sub기능을 활용하여 구현하였습니다.
 
 
 
@@ -7,7 +10,17 @@
 
 
 
-#Result
+## .env
+```
+PORT=
+REDIS_HOST=
+REDIS_PORT=
+```
+
+
+
+
+## Result
 ---
 
 
@@ -22,7 +35,6 @@
 
 
 
-#Reference
----
+## Reference
 - [https://socket.io/docs/v4/redis-adapter/](https://socket.io/docs/v4/redis-adapter/)
 - [https://docs.nestjs.com/websockets/adapter](https://docs.nestjs.com/websockets/adapter)
