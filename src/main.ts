@@ -3,7 +3,6 @@ import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { Logger } from '@nestjs/common';
 import { join } from 'path';
-import { SocketIoAdapter } from './socketIOAdaptor';
 import { RedisIoAdapter } from './redisAdapter';
 class Application {
   static instance: Application;
