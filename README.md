@@ -3,6 +3,10 @@
 ## 📒**소개 **
 
 Redis에 Pub/Sub기능을 활용하여 Scale out한 Socket server를 만들어 보았습니다
+
+
+
+
 .env파일 PORT와 public/script.js io port번호를 맞춰주시고 사용하시면 됩니다
 
 
