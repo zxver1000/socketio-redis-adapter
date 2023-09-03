@@ -11,7 +11,7 @@ class Application {
   constructor(private server: NestExpressApplication) {
     if (Application.instance) return Application.instance;
     this.server = server;
-    this.PORT = process.env.PORT || '3081';
+    this.PORT = process.env.PORT || '3001';
     Application.instance = this;
   }
 
